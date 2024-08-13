@@ -10,7 +10,3 @@ To install this app comply with this actions:
 * make install
 * make build
 * make start
-
-## Technology stack:
-
-JavaScript, Git, GitHub, GitHub Actions (CI), ESLint, Lodash, React/Redux, websockets, React hooks, Redux (@reduxjs/toolkit), Formik, Bootstrap.
