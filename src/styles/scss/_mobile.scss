@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+  .btn {
+
+    &-login {
+      display: none;
+    }
+
+    &-menu {
+      display: inline-block;
+    }
+  }
+
+
+  .header-content {
+
+    &-left {
+      
+      &-menu {
+        display: none;
+      }
+    }
+  }
+}

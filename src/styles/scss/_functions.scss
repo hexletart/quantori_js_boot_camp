@@ -1,0 +1,37 @@
+@function px-rem($values) {
+  $result: ();
+
+  @each $value in $values {
+    @if $value == 0 {
+      $result: append($result, 0);
+    } @else {
+      $result: append($result, (calc($value / $rem) * 1rem));
+    }
+  }
+
+  @return #{$result};
+}
+
+@function strip-unit($num) {
+  @return $num / (($num * 0) + 1);
+}
+
+@function value-to-selector-name($value) {
+  @if $value == 0 {
+    @return #{$value};
+  }
+
+  $aim: ".";
+  $replacer: "-";
+  $index: str-index($value, $aim);
+
+  @if $index {
+    @return str-slice($value, 1, $index - 1) + $replacer + str-slice($value, $index + 1, str-length($value));
+  }
+
+  @return $value;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}

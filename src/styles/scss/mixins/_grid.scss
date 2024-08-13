@@ -1,0 +1,206 @@
+// Row
+
+@mixin grid-repeat-rows-gap($rows-amount, $rows-value, $row-gap: null) {
+  @if not $row-gap {
+    display: grid;
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+  } @else {
+    display: grid;
+    grid-row-gap: #{$row-gap};
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+  }
+}
+
+@mixin grid-certain-rows-gap($rows, $row-gap: null) {
+  @if not $row-gap {
+    display: grid;
+    grid-template-rows: #{$rows};
+  } @else {
+    display: grid;
+    grid-row-gap: #{$row-gap};
+    grid-template-rows: #{$rows};
+  }
+}
+
+@mixin grid-repeat-rows-position-gap($rows-amount, $rows-value, $justify-content, $align-items, $row-gap: null) {
+  @if not $row-gap {
+    display: grid;
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-row-gap: #{$row-gap};
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+@mixin grid-certain-rows-position-gap($rows, $justify-content, $align-items, $row-gap: null) {
+  @if not $row-gap {
+    display: grid;
+    grid-template-rows: #{$rows};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-row-gap: #{$row-gap};
+    grid-template-rows: #{$rows};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+// Column
+
+@mixin grid-repeat-columns-gap($columns-amount, $columns-value, $column-gap: null) {
+  @if not $column-gap {
+    display: grid;
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+  } @else {
+    display: grid;
+    grid-column-gap: #{$column-gap};
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+  }
+}
+
+@mixin grid-certain-columns-gap($columns, $column-gap: null) {
+  @if not $column-gap {
+    display: grid;
+    grid-template-columns: #{$columns};
+  } @else {
+    display: grid;
+    grid-column-gap: #{$column-gap};
+    grid-template-columns: #{$columns};
+  }
+}
+
+@mixin grid-repeat-columns-position-gap($columns-amount, $columns-value,
+$justify-content, $align-items, $column-gap: null) {
+  @if not $column-gap {
+    display: grid;
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-column-gap: #{$column-gap};
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+@mixin grid-certain-columns-position-gap($columns, $justify-content, $align-items, $column-gap: null) {
+  @if not $column-gap {
+    display: grid;
+    grid-template-columns: #{$columns};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-column-gap: #{$column-gap};
+    grid-template-columns: #{$columns};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+// Both
+
+@mixin grid-repeat-rows-columns-gap($rows-amount, $rows-value, $columns-amount, $columns-value, $grid-gap: null) {
+  @if not $grid-gap {
+    display: grid;
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+  } @else {
+    display: grid;
+    grid-gap: #{$grid-gap};
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+  }
+}
+
+@mixin grid-certain-rows-columns-gap($rows, $columns, $grid-gap: null) {
+  @if not $grid-gap {
+    display: grid;
+    grid-template-rows: #{$rows};
+    grid-template-columns: #{$columns};
+  } @else {
+    display: grid;
+    grid-gap: #{$grid-gap};
+    grid-template-rows: #{$rows};
+    grid-template-columns: #{$columns};
+  }
+}
+
+@mixin grid-repeat-rows-columns-position-gap($rows-amount, $rows-value, $columns-amount,
+$columns-value, $justify-content, $align-items, $grid-gap: null) {
+  @if not $grid-gap {
+    display: grid;
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-gap: #{$grid-gap};
+    grid-template-rows: repeat($rows-amount, #{$rows-value});
+    grid-template-columns: repeat($columns-amount, #{$columns-value});
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+@mixin grid-certain-rows-columns-position-gap($rows, $columns, $justify-content, $align-items, $grid-gap: null) {
+  @if not $grid-gap {
+    display: grid;
+    grid-template-rows: #{$rows};
+    grid-template-columns: #{$columns};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  } @else {
+    display: grid;
+    grid-gap: #{$grid-gap};
+    grid-template-rows: #{$rows};
+    grid-template-columns: #{$columns};
+    align-items: $align-items;
+    justify-content: $justify-content;
+  }
+}
+
+@mixin grid-repeat-rows-gap-columns-gap($rows-amount, $rows-value, $rows-gap,
+$columns-amount, $columns-value, $columns-gap) {
+  display: grid;
+  grid-gap: #{$rows-gap} #{$columns-gap};
+  grid-template-rows: repeat($rows-amount, #{$rows-value});
+  grid-template-columns: repeat($columns-amount, #{$columns-value});
+}
+
+@mixin grid-certain-rows-gap-columns-gap($rows, $rows-gap, $columns, $columns-gap) {
+  display: grid;
+  grid-gap: #{$rows-gap} #{$columns-gap};
+  grid-template-rows: #{$rows};
+  grid-template-columns: #{$columns};
+}
+
+@mixin grid-repeat-rows-gap-columns-gap-position($rows-amount, $rows-value, $rows-gap, $columns-amount,
+$columns-value, $columns-gap, $justify-content, $align-items) {
+  display: grid;
+  grid-gap: #{$rows-gap} #{$columns-gap};
+  grid-template-rows: repeat($rows-amount, #{$rows-value});
+  grid-template-columns: repeat($columns-amount, #{$columns-value});
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin grid-certain-rows-gap-columns-gap-position($rows, $rows-gap, $columns, $columns-gap,
+$justify-content, $align-items) {
+  display: grid;
+  grid-gap: #{$rows-gap} #{$columns-gap};
+  grid-template-rows: #{$rows};
+  grid-template-columns: #{$columns};
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

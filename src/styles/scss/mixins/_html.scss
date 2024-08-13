@@ -1,0 +1,10 @@
+@mixin html($font-type, $serif-type, $font-size, $line-height, $color, $color-bg) {
+  html {
+    color: #{$color};
+    font-size: #{$font-size};
+    font-family: #{$font-type}, #{$serif-type};
+    line-height: #{$line-height};
+
+    background-color: #{$color-bg};
+  }
+}

@@ -1,0 +1,20 @@
+:root {
+  --color-primary: rgb(102, 131, 126);
+  --color-secondary: rgb(255, 255, 255);
+  --color-smooth: rgb(54, 72, 94);
+  --color-bg-1: rgb(102, 131, 126);
+  --color-bg-2: rgb(157, 78, 45);
+  --color-bg-3: rgb(73, 95, 75);
+  --color-bg-4: rgb(157, 171, 182);
+  --color-bg-5: rgb(221, 152, 87);
+}
+
+$rem: 16px;
+$font-sizes: px-rem(14px), px-rem(16px), px-rem(18px);
+$font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+$font-headings: (
+  h1: px-rem(36px),
+  h2: px-rem(24px),
+  h3: px-rem(18px),
+);

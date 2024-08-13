@@ -1,0 +1,23 @@
+@mixin position-absolute {
+  .pos-absolute {
+    position: absolute;
+  }
+}
+
+@mixin position-relative {
+  .pos-relative {
+    position: relative;
+  }
+}
+
+@mixin position-fixed {
+  .pos-fixed {
+    position: fixed;
+  }
+}
+
+@mixin position-sticky {
+  .pos-sticky {
+    position: sticky;
+  }
+}

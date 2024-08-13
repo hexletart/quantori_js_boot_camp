@@ -1,0 +1,5 @@
+@mixin color($color-name, $color) {
+  .#{$color-name} {
+    color: $color;
+  }
+}

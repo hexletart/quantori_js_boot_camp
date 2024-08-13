@@ -1,0 +1,45 @@
+@mixin heading-set($heading-type, $font-size, $line-height, $font-family, $color, $font-weight, $text-transfom: null) {
+  @if not $text-transfom {
+    #{$heading-type} {
+      color: $color;
+      font-weight: #{$font-weight};
+      font-size: #{$font-size};
+      font-family: "#{$font-family}",
+      sans-serif;
+      line-height: #{$line-height};
+    }
+  } @else {
+    #{$heading-type} {
+      color: $color;
+      font-weight: #{$font-weight};
+      font-size: #{$font-size};
+      font-family: "#{$font-family}",
+      sans-serif;
+      line-height: #{$line-height};
+      text-transform: #{$text-transfom};
+    }
+  }
+}
+
+@mixin paragraphs-fixed($sizes) {
+  @each $value in $sizes {
+    .p-#{value-to-selector-name(#{$value})} {
+      font-size: #{$value};
+      line-height: 1.5;
+    }
+  }
+}
+
+@mixin no-wrap {
+  .no-wrap {
+    white-space: nowrap;
+  }
+}
+
+@mixin font-weights($sizes) {
+  @each $value in $sizes {
+    .fw-#{$value} {
+      font-weight: #{$value};
+    }
+  }
+}

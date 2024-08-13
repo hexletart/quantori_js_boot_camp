@@ -1,0 +1,54 @@
+// Width
+
+@mixin width-in-perc($value) {
+  .perc-w-#{$value} {
+    width: #{$value} + '%';
+  }
+}
+
+@mixin width($width) {
+  .w-#{value-to-selector-name(#{$width})} {
+    width: #{$width};
+  }
+}
+
+@mixin min-width($width) {
+  .min-w-#{value-to-selector-name(#{$width})} {
+    min-width: $width;
+  }
+}
+
+@mixin max-width($width) {
+  .max-w-#{value-to-selector-name(#{$width})} {
+    max-width: $width;
+  }
+}
+
+// Height
+
+@mixin height($height) {
+  .h-#{value-to-selector-name(#{$height})} {
+    height: #{$height};
+  }
+}
+
+@mixin min-height($height) {
+  .min-h-#{value-to-selector-name(#{$height})} {
+    min-height: $height;
+  }
+}
+
+@mixin max-height($height) {
+  .max-h-#{value-to-selector-name(#{$height})} {
+    max-height: $height;
+  }
+}
+
+// Width && Height
+
+@mixin width-height($width, $height) {
+  .w-#{value-to-selector-name(#{$width})}-h-#{value-to-selector-name(#{$height})} {
+    width: #{$width};
+    height: #{$height};
+  }
+}

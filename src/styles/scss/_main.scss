@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../../public/assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../../public/assets/fonts/roboto/Roboto-Bold.ttf");
+}
+
+html {
+  color: var(--color-font-primary);
+  font-size: px-rem(16px);
+  font-family: "Roboto Regular", sans-serif;
+  line-height: 1.2;
+
+  background-color: var(--color-bg-primary);
+}
+
+@include width-in-perc(100);
+@include pad-x(px-rem(32px));
+@include pad-x(px-rem(0));
+@include pad-y(px-rem(8px));
+@include mar-s(px-rem(32px));
+@include mar-y(0);
+@include mar-e(0);
+@include height(100);
+@include pad-t(px-rem(8px));
+
+@include paragraphs-fixed($font-sizes);
+@include font-weights($font-weights);
+@include headings($font-headings);
+@include max-width(px-rem(1200px));
+@include pad-x(px-rem(16px));
+@include pad-x(px-rem(80px));
+@include mar-blank(0);
+@include pad-y(px-rem(32px));
+@include width(px-rem(600px));
+@include width(px-rem(400px));
+@include mar-s(px-rem(40px));
+@include mar-e(px-rem(40px));
+@include mar-b(px-rem(12px));
+
+@include pad-y(px-rem(32px));
+@include pad-blank(px-rem(32px));
+@include height(px-rem(100px));
+
+.root,
+header,
+main,
+footer,
+div,
+input {
+  color: var(--color-secondary);
+  box-sizing: border-box;
+}
+
+.root,
+header,
+main {
+  @include flex-column-flex-start-center;
+  width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.root {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.btn {
+
+  &-login {
+    display: block;
+  }
+
+  &-menu {
+    display: none;
+  }
+}
+
+
+
+.header-content {
+  @include flex-row-space-between-center;
+
+  &-left {
+    @include flex-row-flex-start-center;
+
+    &-logo,
+    &-menu {
+      @include flex-row-flex-start-center;
+
+    }
+
+    &-right {
+      @include flex-row-flex-end-center;
+    }
+  }
+
+  &-right {
+    display: inline-flex;
+  }
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+.footer-content {
+  width: 100%;
+  background-color: var(--color-smooth);
+  @include flex-row-flex-end-center;
+}

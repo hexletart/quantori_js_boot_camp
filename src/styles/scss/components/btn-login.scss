@@ -1,0 +1,22 @@
+.btn-login {
+  display: block;
+  box-sizing: border-box;
+
+  background-color: white;
+  color: var(--color-primary);
+  font-size: px-rem(16px);
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+
+  border-radius: px-rem(4px);
+  border: 2px solid var(--color-primary);
+  padding: px-rem(4px) px-rem(16px) px-rem(4px);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary)
+  }
+}

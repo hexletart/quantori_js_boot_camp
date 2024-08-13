@@ -1,0 +1,8 @@
+@mixin headings($collection) {
+  @each $heading-type, $value in $collection {
+    #{$heading-type} {
+      font-size: $value;
+      font-weight: 600;
+    }
+  }
+};

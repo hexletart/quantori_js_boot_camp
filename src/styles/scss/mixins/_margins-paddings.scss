@@ -1,0 +1,91 @@
+// Padding
+
+@mixin pad-t($value) {
+  .pad-t-#{value-to-selector-name($value)} {
+    padding-top: #{$value};
+  } 
+}
+
+@mixin pad-b($value) {
+  .pad-b-#{value-to-selector-name($value)} {
+    padding-bottom: #{$value};
+  }
+}
+
+@mixin pad-s($value) {
+  .pad-s-#{value-to-selector-name($value)} {
+    padding-left: #{$value};
+  }  
+}
+
+@mixin pad-e($value) {
+  .pad-e-#{value-to-selector-name($value)} {
+    padding-right: #{$value};
+  }
+}
+
+@mixin pad-x($value) {
+  .pad-x-#{value-to-selector-name($value)} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+}
+
+@mixin pad-y($value) {
+  .pad-y-#{value-to-selector-name($value)} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+}
+
+@mixin pad-blank($value) {
+  .pad-blank-#{value-to-selector-name($value)} {
+    padding: $value;
+  }
+}
+
+// Margin
+
+@mixin mar-t($value) {
+  .mar-t-#{value-to-selector-name($value)} {
+    margin-top: #{$value};
+  } 
+}
+
+@mixin mar-b($value) {
+  .mar-b-#{value-to-selector-name($value)} {
+    margin-bottom: #{$value};
+  }
+}
+
+@mixin mar-s($value) {
+  .mar-s-#{value-to-selector-name($value)} {
+    margin-left: #{$value};
+  }  
+}
+
+@mixin mar-e($value) {
+  .mar-e-#{value-to-selector-name($value)} {
+    margin-right: #{$value};
+  }
+}
+
+@mixin mar-x($value) {
+  .mar-x-#{value-to-selector-name($value)} {
+    margin-left: #{$value};
+    margin-right: #{$value};
+  }
+}
+
+@mixin mar-y($value) {
+  .mar-y-#{value-to-selector-name($value)} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+}
+
+@mixin mar-blank($value) {
+  .mar-blank-#{value-to-selector-name($value)} {
+    margin: $value;
+  }
+}

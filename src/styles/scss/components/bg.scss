@@ -1,0 +1,32 @@
+.background-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  z-index: -1;
+
+  .bg-item {
+    width: 100%;
+    height: 100%;
+
+    &.item-1, &.item-4 {
+      background-color: var(--color-bg-1);
+    }
+    &.item-2, &.item-3 {
+      background-color: var(--color-bg-2);
+    }
+    &.item-5 {
+      background-color: var(--color-bg-3);
+    }
+    &.item-7, &.item-8 {
+      background-color: var(--color-bg-4);
+    }
+    &.item-6, &.item-9 {
+      background-color: var(--color-bg-5);
+    }
+  }
+}
